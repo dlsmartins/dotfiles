@@ -10,7 +10,7 @@ ZSH_THEME="babun"
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias ls="ls -anlp"
+alias lsa="ls -anlp"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
