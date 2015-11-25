@@ -2,10 +2,11 @@
 execute pathogen#infect()
 
 " Enable Omni completion
+filetype plugin on
 set omnifunc=syntaxcomplete#Complete
 
 " Enable neocomplete
-let g:neocomplete#enable_at_startup = 1
+"let g:neocomplete#enable_at_startup = 1
 
 " Enable syntax highlighting
 syntax enable
@@ -24,6 +25,8 @@ set number
 " Enable solarized theme
 set background=dark
 colorscheme solarized
+set guifont=Consolas\ for\ Powerline\ FixedD:h11
+let g:airline_powerline_fonts=1
 
 " Disable folding
 set nofoldenable
