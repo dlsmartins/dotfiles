@@ -13,3 +13,9 @@
 [submodule ".vim/bundle/vim-bufferline"]
 	path = .vim/bundle/vim-bufferline
 	url = https://github.com/bling/vim-bufferline.git
+[submodule "vim-ledger"]
+	path = vim-ledger
+	url = https://github.com/ledger/vim-ledger.git
+[submodule "vim-airline"]
+	path = vim-airline
+	url = https://github.com/bling/vim-airline.git
