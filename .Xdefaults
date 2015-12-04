@@ -1,0 +1,55 @@
+!-------------------------------------------------------------------------------
+! Font settings
+!-------------------------------------------------------------------------------
+
+Xft.dpi:                    96
+Xft.antialias:              true
+Xft.rgba:                   rgb
+Xft.hinting:                true
+Xft.hintstyle:              hintslight
+Xft.autohint:               false
+
+!-------------------------------------------------------------------------------
+! urxvt settings
+!-------------------------------------------------------------------------------
+URxvt.depth:                32
+URxvt.geometry:             90x30
+URxvt.transparent:          false
+URxvt.fading:               0
+URxvt.urgentOnBell:         true
+URxvt.visualBell:           true
+URxvt.loginShell:           true
+URxvt.saveLines:            32767
+URxvt.internalBorder:       3
+URxvt.lineSpace:            0
+URxvt.termName:             xterm-256color
+
+! Fonts
+URxvt.allow_bold:           false
+URxvt*font:                 xft:Dejavu Sans Mono for Powerline:pixelsize=12,antialias=true,hinting=true,style=regular
+URxvt*boldFont:             xft:Dejavu Sans Mono for Powerline:pixelsize=12,antialias=true,hinting=true,style=bold
+
+! Hack to fix Powerline font space
+URxvt*letterSpace:          -1 
+
+! Scroll
+URxvt.scrollStyle:          rxvt
+URxvt.scrollBar:            false
+URxvt.keysym.Shift-Up: command:\033]720;1\007
+URxvt.keysym.Shift-Down: command:\033]721;1\007
+
+! Perl extensions
+URxvt.perl-ext-common:      default,matcher,clipboard,keyboard-select,url-select
+URxvt.matcher.button:       1
+URxvt.urlLauncher:          xdg-open
+
+! Cursor
+URxvt.cursorBlink:          true
+URxvt.cursorColor:          #859900
+URxvt.cursorUnderline:      false
+
+! Pointer
+URxvt.pointerBlank:         true
+
+URxvt.intensityStyles: false
+#include "/root/.colours/solarized"
