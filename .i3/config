@@ -52,10 +52,10 @@ gaps outer $default_gaps_outer
 #=============
 
 # Start compton composition
-exec --no-startup-id compton -i 0.9
+#exec --no-startup-id compton -i 0.9
 
 # Set wallpaper with feh
-exec --no-startup-id feh --bg-center /root/Pictures/kali.jpg
+#exec --no-startup-id feh --bg-center /root/Pictures/kali.jpg
 
 
 

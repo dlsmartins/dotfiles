@@ -22,7 +22,8 @@ URxvt.loginShell:           true
 URxvt.saveLines:            32767
 URxvt.internalBorder:       3
 URxvt.lineSpace:            0
-URxvt.termName:             xterm-256color
+URxvt.termName:             rxvt-unicode-256color
+!URxvt.termName:             xterm-256color
 
 ! Fonts
 URxvt.allow_bold:           false
@@ -52,4 +53,4 @@ URxvt.cursorUnderline:      false
 URxvt.pointerBlank:         true
 
 URxvt.intensityStyles: false
-#include "/root/.colours/solarized"
+#include "/home/danielmartins/.colours/solarized"

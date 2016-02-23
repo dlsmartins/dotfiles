@@ -21,6 +21,8 @@ set softtabstop=4
 
 " Show line numbers
 set number
+set cursorline
+set colorcolumn=80
 
 " Enable solarized theme
 set background=dark

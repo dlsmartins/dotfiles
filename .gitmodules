@@ -6,7 +6,7 @@
 	url = https://github.com/ledger/vim-ledger.git
 [submodule ".vim/bundle/vim-airline"]
 	path = .vim/bundle/vim-airline
-	url = https://github.com/bling/vim-airline
+	url = https://github.com/vim-airline/vim-airline.git
 [submodule ".vim/bundle/.vim/bundle/vim-bufferline"]
 	path = .vim/bundle/.vim/bundle/vim-bufferline
 	url = https://github.com/bling/vim-bufferline.git
@@ -19,3 +19,12 @@
 [submodule "vim-airline"]
 	path = vim-airline
 	url = https://github.com/bling/vim-airline.git
+[submodule ".vim/bundle/vim-sensible"]
+	path = .vim/bundle/vim-sensible
+	url = https://github.com/tpope/vim-sensible.git
+[submodule ".vim/bundle/vim-airline-themes"]
+	path = .vim/bundle/vim-airline-themes
+	url = https://github.com/vim-airline/vim-airline-themes.git
+[submodule ".vim/bundle/nerd-tree"]
+	path = .vim/bundle/nerd-tree
+	url = https://github.com/scrooloose/nerdtree
