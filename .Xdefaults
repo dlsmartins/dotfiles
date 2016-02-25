@@ -6,8 +6,9 @@ Xft.dpi:                    96
 Xft.antialias:              true
 Xft.rgba:                   rgb
 Xft.hinting:                true
-Xft.hintstyle:              hintslight
+Xft.hintstyle:              hintfull
 Xft.autohint:               false
+Xft.lcdfilter:              lcddefault
 
 !-------------------------------------------------------------------------------
 ! urxvt settings
@@ -54,3 +55,13 @@ URxvt.pointerBlank:         true
 
 URxvt.intensityStyles: false
 #include "/home/danielmartins/.colours/solarized"
+
+! ------------------------------------------------------------------------------
+! ROFI Color theme
+! ------------------------------------------------------------------------------
+rofi.color-enabled: true
+rofi.color-window: #002b37, #002b37, #003642
+rofi.color-normal: #002b37, #819396, #002b37, #003642, #819396
+rofi.color-active: #002b37, #008ed4, #002b37, #003642, #008ed4
+rofi.color-urgent: #002b37, #da4281, #002b37, #003642, #da4281
+
