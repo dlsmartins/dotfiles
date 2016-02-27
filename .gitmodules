@@ -19,12 +19,15 @@
 [submodule "vim-airline"]
 	path = vim-airline
 	url = https://github.com/bling/vim-airline.git
-[submodule ".vim/bundle/vim-sensible"]
-	path = .vim/bundle/vim-sensible
-	url = https://github.com/tpope/vim-sensible.git
 [submodule ".vim/bundle/vim-airline-themes"]
 	path = .vim/bundle/vim-airline-themes
 	url = https://github.com/vim-airline/vim-airline-themes.git
 [submodule ".vim/bundle/nerd-tree"]
 	path = .vim/bundle/nerd-tree
 	url = https://github.com/scrooloose/nerdtree
+[submodule ".vim/bundle/base16-vim"]
+	path = .vim/bundle/base16-vim
+	url = https://github.com/chriskempson/base16-vim
+[submodule ".vim/bundle/gruvbox"]
+	path = .vim/bundle/gruvbox
+	url = https://github.com/morhetz/gruvbox

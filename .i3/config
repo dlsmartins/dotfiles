@@ -13,15 +13,15 @@ new_window pixel 2
 new_float pixel 2
 
 # Define colors
-set $back               #1d1F21
-set $black              #282A2E
-set $grey               #373B41
-set $lightgrey          #707880
-set $white              #C5C8C6
-set $yellow             #F0C674
-set $red                #CC6666
-set $darkred            #A54242
-set $green              #B5BD56
+set $back               #282828
+set $black              #1D2021
+set $grey               #928374
+set $lightgrey          #A89984
+set $white              #EBDBB2
+set $yellow             #D79921
+set $red                #FB4934
+set $darkred            #CC241D
+set $green              #B8BB26
 
 # Set client classes    border      backgr.     text        split
 client.focused          $green      $green      $black      $red
@@ -37,7 +37,7 @@ client.background       $back
 #===========
 
 # Enable smart gaps (no gap if only one client on workspace
-smart_gaps on
+#smart_gaps on
 
 # Set gap sizes
 set $default_gaps_inner 10
@@ -148,9 +148,12 @@ bindsym $mod+a focus parent
 # focus the child container
 #bindsym $mod+d focus child
 
+# focus the urgent child
+bindsym $mod+x [urgent=latest] focus
+
 set $ws1 1:  
 set $ws2 2: 
-set $ws3 3: 
+set $ws3 3: 
 set $ws4 4: 
 set $ws5 5: 
 set $ws6 6: 
@@ -182,6 +185,10 @@ bindsym $mod+Shift+7 move container to workspace $ws7
 bindsym $mod+Shift+8 move container to workspace $ws8
 bindsym $mod+Shift+9 move container to workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws10
+
+# assign apps to workspaces
+assign [class="Jumanji"] $ws2
+assign [class="Xfe"] $ws3
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -226,7 +233,8 @@ bindsym $mod+r mode "resize"
 
 # Start i3bar to display a workspace bar 
 bar {
-    status_command          i3status
+    #status_command          i3status
+    status_command          i3blocks
     #status_command          i3blocks
     #i3bar_command           ~/.i3/lemonbar/i3_lemonbar.sh
     position                top
@@ -234,16 +242,16 @@ bar {
     #workspace_buttons       yes
     separator_symbol        " "    
     colors {
-        background          #073642
-        statusline          #268bd2
+        background          #282828
+        statusline          #458588
         separator           #b58900
         # class border backgrd text
-        focused_workspace   #268bd2 #268bd2 #ffffff
+        focused_workspace   #458588 #258588 #ebdbb2
         #focused_workspace   #859900 #859900 #ffffff
-        active_workspace    #cb4b16 #cb4b16 #ffffff
+        #active_workspace    #cb4b16 #cb4b16 #ffffff
         #inactive_workspace  #252525 #252525 #6b6b6b
-        inactive_workspace  #073642 #073642 #268bd2
-        urgent_workspace    #252525 #252525 #c7a551
+        inactive_workspace  #282828 #282828 #258588
+        urgent_workspace    #cc241d #cc241d #ebdbb2
     }
 }
 

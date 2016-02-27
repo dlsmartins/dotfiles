@@ -21,12 +21,22 @@ set softtabstop=4
 
 " Show line numbers
 set number
-set cursorline
-set colorcolumn=80
 
-" Enable solarized theme
+" Shoe command in bottom bar
+set showcmd
+set wildmenu
+set lazyredraw
+set showmatch
+set incsearch
+set hlsearch
+
+
+" Highlight current line
+set cursorline
+
+" Set theme and enable powerline
 set background=dark
-colorscheme solarized
+colorscheme gruvbox
 let g:airline_powerline_fonts=1
 
 " Disable folding

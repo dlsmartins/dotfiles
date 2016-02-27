@@ -1,20 +1,20 @@
 [OPTIONS]
-height=955
+height=935
 toolstoolbar=1
 folder_warn=1
-panel_view=0
-width=1918
+panel_view=3
+width=943
 confirm_drag_and_drop=1
 use_startup_notification=1
 preserve_date_warn=1
 confirm_delete=1
 use_sudo=1
-use_trash_can=1
+use_trash_can=0
 auto_save_layout=1
 use_trash_bypass=0
 mount_warn=1
 root_mode=1
-treetwopanels_lpanel_pct=0.4
+treetwopanels_lpanel_pct=0.37
 confirm_overwrite=1
 paneltoolbar=1
 confirm_delete_emptydir=1
@@ -36,34 +36,6 @@ xfv_replaced=1
 
 [HISTORY]
 open=feh:
-
-[SETTINGS]
-listforecolor=Black
-iconpath=/usr/share/xfe/icons/gnomeblue-theme
-hilitecolor=Gray100
-single_click=0
-highlightcolor=#eeeeee
-wheellines=5
-bordercolor=Black
-relative_resize=1
-listbackcolor=Gray100
-shadowcolor=#a5a39e
-file_tooltips=1
-tippause=500
-scrollbarcolor=#ede9e3
-forecolor=Black
-basecolor=#ede9e3
-time_format=%x %X
-selbackcolor=#0a246a
-smooth_scroll=1
-use_clearlooks=1
-attentioncolor=Red
-backcolor=Gray100
-tiptime=10000
-selforecolor=Gray100
-pbarcolor=#0a246a
-save_win_pos=0
-show_pathlinker=1
 
 [KEYBINDINGS]
 search_prev=Shift-Ctrl-G
@@ -140,46 +112,74 @@ empty_trash_can=Ctrl-Del
 rotate_left=Ctrl-L
 
 [RIGHT PANEL]
-type_size=100
+type_size=101
 deldate_size=150
 origpath_size=200
 liststyle=0
-attr_size=100
-size_size=60
-user_size=50
+attr_size=101
+size_size=61
+user_size=51
 dirs_first=1
-ext_size=100
-grou_size=50
-modd_size=150
+ext_size=101
+grou_size=51
+modd_size=152
 ignore_case=1
 sort_func=ascendingCase
 showthumbnails=0
-name_size=200
+name_size=202
 lastdir=/home/danielmartins
 hiddenfiles=0
 
-[DIR PANEL]
-hidden_dir=0
-sort_func=ascendingCase
+[PROGS]
+imgviewer=feh
+xterm=urxvt
 
 [LEFT PANEL]
-type_size=100
+type_size=101
 deldate_size=150
 origpath_size=200
 liststyle=0
-attr_size=100
-size_size=60
-user_size=50
+attr_size=101
+size_size=61
+user_size=51
 dirs_first=1
-ext_size=100
-grou_size=50
-modd_size=150
+ext_size=101
+grou_size=51
+modd_size=152
 ignore_case=1
 sort_func=ascendingCase
 showthumbnails=0
-name_size=200
-lastdir=/home/danielmartins/.i3
+name_size=202
+lastdir=/home/danielmartins
 hiddenfiles=0
+
+[SETTINGS]
+listforecolor=Black
+iconpath=/usr/share/xfe/icons/gnomeblue-theme
+hilitecolor=Gray100
+single_click=0
+highlightcolor=#eeeeee
+wheellines=5
+bordercolor=Black
+relative_resize=1
+listbackcolor=Gray100
+shadowcolor=#a5a39e
+file_tooltips=1
+tippause=500
+scrollbarcolor=#ede9e3
+forecolor=Black
+basecolor=#ede9e3
+time_format=%x %X
+selbackcolor=#0a246a
+smooth_scroll=1
+use_clearlooks=1
+attentioncolor=Red
+backcolor=Gray100
+tiptime=10000
+selforecolor=Gray100
+pbarcolor=#0a246a
+save_win_pos=0
+show_pathlinker=1
 
 [FILETYPES]
 sdw=lowriter,lowriter,lowriter;Starwriter 5.0 Document;sxw_32x32.png;sxw_16x16.png;;
@@ -389,4 +389,8 @@ otg=lodraw,lodraw,lodraw;OpenDocument Template Graphic;odg_32x32.png;odg_16x16.p
 otf=fontforge,,fontforge;OpenType Font;font_32x32.png;font_16x16.png;;
 sdi=loimpress,loimpress,loimpress;StarImpress 5.0 Document;sxi_32x32.png;sxi_16x16.png;;
 xfprc=<txteditor>,<txtviewer>,<txteditor>;Xfe Configuration;config_32x32.png;config_16x16.png;;
+
+[DIR PANEL]
+hidden_dir=0
+sort_func=ascendingCase
 
