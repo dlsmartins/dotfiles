@@ -18,7 +18,6 @@ syntax enable " Enable syntax highlighting
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
-"set smarttab
 set expandtab
 " }}}
 
@@ -57,24 +56,15 @@ set backspace=indent,eol,start " Enable backspace through anything in insert mod
 let mapleader="," " Set mapleader to ,
 " }}}
 
-" Enable Omni completion
-set omnifunc=syntaxcomplete#Complete
-set modelines=1
+" Other {{{
+set omnifunc=syntaxcomplete#Complete " Enable Omni completion
+set modelines=1 " Enable mode lines
 set ttimeoutlen=100
-" Disable folding
-set nofoldenable
-" Always display one line before and after the cursor
-set scrolloff=1
-" If a line is too long to fit on screen, display it on next line
-set display+=lastline
-" Set representations for whitespace chars
-"set listchars=eol:¬,tab:••,trail:␣,precedes:←,extends:→
-"set listchars=eol:¬,tab:░•,trail:␣,precedes:←,extends:→
-set listchars=eol:¬,trail:␣,precedes:←,extends:→
-" Enable display of whitespace chars
-set list
+set scrolloff=1 " Always display one line before and after the cursor
+set display+=lastline " If a line is too long to fit on screen, display it on next line
+set listchars=eol:¬,tab:░•,trail:␣,precedes:←,extends:→ " Set representations for whitespace chars
+set list " Enable display of whitespace chars
+let g:indentLine_leadingSpaceChar = '•' " Set indentLine plugin leading space char
+let g:indentLine_leadingSpaceEnabled = 1 " Enable indentLine plugin leading spaces
+" }}}
 
-"let g:indentLine_char = '░'
-" Enable display of whitespace chars
-let g:indentLine_leadingSpaceChar = '·'
-let g:indentLine_leadingSpaceEnabled = 1

@@ -26,7 +26,7 @@ twopanels_lpanel_pct=0.5
 vert_panels=1
 root_warn=0
 confirm_trash=1
-treetwopanels_lpanel_pct=0.36
+treetwopanels_lpanel_pct=0.34
 status=1
 treepanel_tree_pct=0.2
 treetwopanels_tree_pct=0.2
@@ -112,46 +112,46 @@ empty_trash_can=Ctrl-Del
 rotate_left=Ctrl-L
 
 [RIGHT PANEL]
-type_size=101
+type_size=203
 deldate_size=150
 origpath_size=200
 liststyle=0
-attr_size=101
-user_size=51
+attr_size=203
+user_size=103
 hiddenfiles=0
 dirs_first=1
-ext_size=101
-grou_size=51
-modd_size=152
+ext_size=203
+grou_size=103
+modd_size=306
 ignore_case=1
 sort_func=ascendingCase
 showthumbnails=0
-name_size=202
+name_size=407
 lastdir=/home/danielmartins
-size_size=61
+size_size=123
 
 [PROGS]
 imgviewer=feh
 xterm=urxvt
 
 [LEFT PANEL]
-type_size=101
+type_size=203
 deldate_size=150
 origpath_size=200
 liststyle=0
-attr_size=101
-user_size=51
+attr_size=203
+user_size=103
 hiddenfiles=0
 dirs_first=1
-ext_size=101
-grou_size=51
-modd_size=152
+ext_size=203
+grou_size=103
+modd_size=306
 ignore_case=1
 sort_func=ascendingCase
 showthumbnails=0
-name_size=202
-lastdir=/home/danielmartins/BSEG
-size_size=61
+name_size=407
+lastdir=/home/danielmartins
+size_size=123
 
 [SETTINGS]
 listforecolor=Black
