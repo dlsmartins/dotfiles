@@ -68,3 +68,12 @@ let g:indentLine_leadingSpaceChar = '•' " Set indentLine plugin leading space 
 let g:indentLine_leadingSpaceEnabled = 1 " Enable indentLine plugin leading spaces
 " }}}
 
+" Undo, Swap & Backup files {{{
+set undofile " Enable undo files
+set undodir=~/.cache/vim/undo " Set folder to store undo files
+set backup " Enable backup files
+set backupdir=~/.cache/vim/backup " Set folder to store backup files
+set directory=~/.cache/vim/swap  " Set folder to store swap files
+" }}}
+
+
