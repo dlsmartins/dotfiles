@@ -1,0 +1,39 @@
+separator=false
+separator_block_width=0
+#border_top=0
+#border_left=0
+#border_right=0
+#border_bottom=4
+
+#[window]
+#command=xtitle -s
+#interval=persist
+#separator=true
+#separator_block_width=45
+#border=#ebdbb2
+
+[disk /]
+label= 
+command=echo "[/=`df -h / | awk 'FNR==2{print $4}'`]"
+interval=5
+
+[bandwidth-dw]
+label= 
+command=echo "`$XDG_CONFIG_HOME/i3blocks/scripts/bandwidth_dw.sh`"
+interval=1
+separator_block_width=0
+
+[bandwidth-up]
+label= 
+command=echo "`$XDG_CONFIG_HOME/i3blocks/scripts/bandwidth_up.sh`"
+interval=1
+separator_block_width=0
+
+[time]
+label= 
+command=echo "[`date +'%Y-%m-%d'`][<b>`date +'%T'`</b>]"; [[ -z "${BLOCK_BUTTON}" ]] || gsimplecal &
+interval=1
+markup=pango
+#border=#928374
+#background=#92837411
+separator_block_width=0
