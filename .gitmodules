@@ -16,3 +16,6 @@
 [submodule ".vim/bundle/indentLine"]
 	path = .vim/bundle/indentLine
 	url = https://github.com/Yggdroot/indentLine
+[submodule "zsh/.config/zsh/oh-my-zsh"]
+	path = zsh/.config/zsh/oh-my-zsh
+	url = https://github.com/robbyrussell/oh-my-zsh
