@@ -68,9 +68,11 @@ URxvt.intensityStyles: false
 !rofi.color-active: #002b37, #008ed4, #002b37, #003642, #008ed4
 !rofi.color-urgent: #002b37, #da4281, #002b37, #003642, #da4281
 ! Layout
-rofi.width:                          50
+rofi.location:                       8
+rofi.width:                          10
+!rofi.height:                         300
 !rofi.lines:                          15
-rofi.columns:                        2
+rofi.columns:                        1
 rofi.color-enabled:                  true
 rofi.color-normal:                   #282828,#ebdbb2,#353535,#458588,#ebdbb2
 rofi.color-urgent:                   #282828,#d79921,#353535,#d79921,#282828
