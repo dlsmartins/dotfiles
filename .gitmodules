@@ -19,3 +19,21 @@
 [submodule "zsh/.config/zsh/oh-my-zsh"]
 	path = zsh/.config/zsh/oh-my-zsh
 	url = https://github.com/robbyrussell/oh-my-zsh
+[submodule "vim/.config/vim/bundle/gruvbox"]
+	path = vim/.config/vim/bundle/gruvbox
+	url = https://github.com/morhetz/gruvbox
+[submodule "vim/.config/vim/bundle/indentLine"]
+	path = vim/.config/vim/bundle/indentLine
+	url = https://github.com/Yggdroot/indentLine
+[submodule "vim/.config/vim/bundle/nerdtree"]
+	path = vim/.config/vim/bundle/nerdtree
+	url = https://github.com/scrooloose/nerdtree
+[submodule "vim/.config/vim/bundle/vim-airline"]
+	path = vim/.config/vim/bundle/vim-airline
+	url = https://github.com/vim-airline/vim-airline
+[submodule "vim/.config/vim/bundle/vim-bufferline"]
+	path = vim/.config/vim/bundle/vim-bufferline
+	url = https://github.com/bling/vim-bufferline
+[submodule "vim/.config/vim/bundle/vim-ledger"]
+	path = vim/.config/vim/bundle/vim-ledger
+	url = https://github.com/ledger/vim-ledger
