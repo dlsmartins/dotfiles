@@ -25,10 +25,10 @@ plugins=(git)
 # Load oh my zsh
 source $ZSH/oh-my-zsh.sh
 # Set path
-export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+export PATH="/usr/bin/core_perl:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 # export LANG=en_US.UTF-8
-
+export PANEL_FIFO="/tmp/panel-fifo"
 
 function proxy_on() {
     export no_proxy="localhost,127.0.0.1,localaddress,.localdomain.com"

@@ -1,0 +1,44 @@
+#!/bin/bash
+
+COLOR_GREEN=#B8BB26
+COLOR_GREY=#928374
+COLOR_BLACK=#282828
+
+avatar() {
+    a="⚛"
+    echo "$a"
+}
+
+desktops() {
+    ico="○ "
+    ico2="● "
+    cur=`xprop -root _NET_CURRENT_DESKTOP | awk '{print $3}'`
+    tot=`xprop -root _NET_NUMBER_OF_DESKTOPS | awk '{print $3}'`
+    for w in `seq 0 $((cur - 1))`;
+        do line="%{F$COLOR_GREY}${line}$ico"; done
+    line="${line}%{F$COLOR_GREEN}$ico2%{F$COLOR_GREY}"
+    for w in `seq $((cur + 2)) $tot`;
+        do line="${line}$ico"; done
+    echo " $line%{F$COLOR_GREY}"
+}
+
+clock() {
+    date -I
+}
+
+tries=10
+while [ "$tries" -gt 0 ] ; do
+    sleep 0.5
+    echo "Waiting for display..."
+    if ! [ -z "$DISPLAY" ] ; then break ; fi
+    tries=$((tries - 1))
+done
+
+while ! [ -z "$DISPLAY" ] ; do
+    p="   "
+    a="$(avatar)"
+    l="$(desktops)"
+    c="$(clock)"
+    echo "%{l}$p$a%{c}$l%{r}$c$p"
+    sleep 0.5
+done | lemonbar -a 32 -n $PANEL_WM_NAME -g "x20+0+0" -f "Dejavu Sans Mono for Powerline-9" 0 -B "$COLOR_BLACK" -F "$COLOR_GREEN" | sh &
