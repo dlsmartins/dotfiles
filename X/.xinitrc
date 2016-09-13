@@ -1,9 +1,8 @@
 setxkbmap pt
 xrdb -merge ~/.Xresources
 eval $(ssh-agent)
-VBoxClient-all &
 #exec i3
 sxhkd &
-compton -i 0.9 --backend xrender &
-feh --bg-fill -no-fehbg $XDG_CONFIG_HOME/bg.jpg &
+compton --config $XDG_CONFIG_HOME/compton/compton.conf --backend xrender &
+VBoxClient-all &
 exec bspwm

@@ -42,18 +42,19 @@ while read -r line ; do
 						wm="${wm}%{F${FG}}%{B${BG}}%{A:bspc monitor -f ${name}:} ${name} %{A}%{B-}%{F-}"
 						;;
 					[fFoOuU]*)
-                        name_disp=$name
+                        name_disp="$name "
 						case $item in
 							f*)
 								# free desktop
 								FG=$COLOR_FREE_FG
 								BG=$COLOR_FREE_BG
+                                name_disp=""
 								;;
 							F*)
 								# focused free desktop
 								FG=$COLOR_FOCUSED_FREE_FG
 								BG=$COLOR_FOCUSED_FREE_BG
-                                name_disp="%{+u}$name%{-u}"
+                                name_disp="%{+u}$name%{-u} "
 								;;
 							o*)
 								# occupied desktop
@@ -64,7 +65,7 @@ while read -r line ; do
 								# focused occupied desktop
 								FG=$COLOR_FOCUSED_OCCUPIED_FG
 								BG=$COLOR_FOCUSED_OCCUPIED_BG
-                                name_disp="%{+u}$name%{-u}"
+                                name_disp="%{+u}$name%{-u} "
 								;;
 							u*)
 								# urgent desktop
@@ -75,10 +76,10 @@ while read -r line ; do
 								# focused urgent desktop
 								FG=$COLOR_FOCUSED_URGENT_FG
 								BG=$COLOR_FOCUSED_URGENT_BG
-                                name_disp="%{+u}$name%{-u}"
+                                name_disp="%{+u}$name%{-u} "
 								;;
 						esac
-						wm="${wm}%{U${COLOR_SYS_FG}}%{F${FG}}%{B${BG}}%{A:bspc desktop -f ${name}:}${name_disp} %{A}%{B-}%{F-}"
+						wm="${wm}%{U${COLOR_SYS_FG}}%{F${FG}}%{B${BG}}%{A:bspc desktop -f ${name}:}${name_disp}%{A}%{B-}%{F-}"
 						;;
 					#[LTG]*)
 					#	# layout, state and flags
