@@ -10,6 +10,7 @@ set directory=$XDG_CACHE_HOME/vim/swap  " Set folder to store swap files
 set viminfo+=n$XDG_CACHE_HOME/vim/viminfo " Set.viminfo location
 " Launch Pathogen
 execute pathogen#infect()
+execute pathogen#helptags()
 " Jump to last time position
 if has("autocmd")
 	au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
@@ -41,6 +42,8 @@ set showmatch " Highlight matching ]})
 set laststatus=2 " Always display the status line
 set ruler " Enable ruler (line, column indicator)
 let g:airline_powerline_fonts=1 " Enable airline to use powerline fonts
+let g:airline#extensions#tabline#enabled = 1 " Enable buffer list on top
+let g:bufferline_echo = 0 " Display bufferline only on statusbar (not on command bar)
 " }}}
 
 " Searching {{{
@@ -76,3 +79,11 @@ let g:indentLine_leadingSpaceChar = '•' " Set indentLine plugin leading space 
 let g:indentLine_leadingSpaceEnabled = 1 " Enable indentLine plugin leading spaces
 " }}}
 
+" Calendar {{{
+let g:calendar_locale = "pt"
+let g:calendar_first_day = "monday"
+let g:calendar_date_endian = "big"
+let g:calendar_date_separator = "-"
+let g:calendar_week_number = 1
+let g:calendar_google_calendar = 1
+" }}}

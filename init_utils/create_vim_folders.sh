@@ -9,4 +9,5 @@ mkdir -p "$XDG_CACHE_HOME"
 mkdir -p "$XDG_CACHE_HOME/vim"
 mkdir -p "$XDG_CACHE_HOME/vim/backup"
 mkdir -p "$XDG_CACHE_HOME/vim/swap"
+mkdir -p "$XDG_CACHE_HOME/vim/undo"
 touch "$XDG_CACHE_HOME/vim/viminfo" || exit

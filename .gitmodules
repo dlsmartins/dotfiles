@@ -37,3 +37,9 @@
 [submodule "vim/.config/vim/bundle/vim-ledger"]
 	path = vim/.config/vim/bundle/vim-ledger
 	url = https://github.com/ledger/vim-ledger
+[submodule "vim/.config/vim/bundle/vimwiki"]
+	path = vim/.config/vim/bundle/vimwiki
+	url = https://github.com/vimwiki/vimwiki
+[submodule "vim/.config/vim/bundle/calendar.vim"]
+	path = vim/.config/vim/bundle/calendar.vim
+	url = https://github.com/itchyny/calendar.vim
