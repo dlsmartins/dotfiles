@@ -57,3 +57,10 @@ $ITCMD -A UDP -p udp -j REJECT --reject-with icmp-port-unreachable
 $ITCMD -P INPUT DROP
 $ITCMD -P FORWARD DROP
 $ITCMD -P OUTPUT DROP
+
+# SSLH
+$ITCMD -t mangle -N SSLH
+$ITCMD -t mangle -A OUTPUT -p tcp --out-interface $IFPUB --sport 22 -j SSLH
+$ITCMD -t mangle -A OUTPUT -p tcp --out-interface $IFPUB --sport 4443 -j SSLH
+$ITCMD -t mangle -A SSLH --j MARK --set-mark 0x1
+$ITCMD -t mangle -A SSLH --j ACCEPT

@@ -2,8 +2,10 @@ CURRENT_BG='NONE'
 
 () {
   local LC_ALL="" LC_CTYPE="en_US.UTF-8"
-  SEGMENT_SEPARATOR=$'\ue0b0'
-  PL_BRANCH_CHAR=$'\ue0a0' # 
+#  SEGMENT_SEPARATOR=$'\ue0b0'
+  SEGMENT_SEPARATOR=$''
+#  PL_BRANCH_CHAR=$'\ue0a0' # 
+  PL_BRANCH_CHAR=$'-' # 
 }
 
 # Begin a segment
@@ -37,7 +39,8 @@ prompt_end() {
 prompt_context() {
   if [[ "$USER" != "$DEFAULT_USER" || -n "$SSH_CLIENT" ]]; then
     #prompt_segment black default "%(!.%{%F{yellow}%}.)$USER@%m"
-    prompt_segment black default "%(!.%{%F{yellow}%}.)\uf21b"
+    #prompt_segment black default "%(!.%{%F{yellow}%}.)\uf21b"
+    prompt_segment black default "%(!.%{%F{yellow}%}.)#"
   fi
 }
 
@@ -67,7 +70,8 @@ prompt_git() {
 
   #if $(git rev-parse --is-inside-work-tree >/dev/null 2>&1); then
   if [[ -n $repo_path ]]; then
-    ref=$(git symbolic-ref HEAD 2> /dev/null) || ref="➦ $(git rev-parse --short HEAD 2> /dev/null)"
+    #ref=$(git symbolic-ref HEAD 2> /dev/null) || ref="➦ $(git rev-parse --short HEAD 2> /dev/null)"
+    ref=$(git symbolic-ref HEAD 2> /dev/null) || ref="-> $(git rev-parse --short HEAD 2> /dev/null)"
     if [[ -n $dirty ]]; then
       prompt_segment yellow black
     else

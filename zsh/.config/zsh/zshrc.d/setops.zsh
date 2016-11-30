@@ -12,7 +12,7 @@ setopt AUTO_CD
 setopt APPEND_HISTORY 
 
 # Add comamnds as they are typed, don't wait until shell exit
-setopt INC_APPEND_HISTORY 
+setopt INC_APPEND_HISTORY
 
 # Do not write events to history that are duplicates of previous events
 setopt HIST_IGNORE_DUPS
