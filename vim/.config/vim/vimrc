@@ -49,13 +49,11 @@ let g:bufferline_echo = 0 " Display bufferline only on statusbar (not on command
 " Searching {{{
 set incsearch " Enable incremental search (search as you type)
 set hlsearch " Highlight search results
-nnoremap <leader><space> :nohlsearch<CR> " Map clean search highlight
 " }}}
 
 " Folding {{{
 set foldenable " Enable folding
 set foldlevelstart=0 " Close all folds by default
-nnoremap <space> za " Map toggle fold
 set foldmethod=marker " Fold based on markers
 " }}}
 
@@ -65,6 +63,8 @@ set backspace=indent,eol,start " Enable backspace through anything in insert mod
 
 " Leader Shortcuts {{{
 let mapleader="," " Set mapleader to ,
+nnoremap <leader><space> :nohlsearch<CR> " Map clean search highlight
+"nnoremap <space> za " Map toggle fold
 " }}}
 
 " Other {{{
@@ -77,6 +77,10 @@ set listchars=eol:¬,tab:░•,trail:␣,precedes:←,extends:→ " Set represe
 set list " Enable display of whitespace chars
 let g:indentLine_leadingSpaceChar = '•' " Set indentLine plugin leading space char
 let g:indentLine_leadingSpaceEnabled = 1 " Enable indentLine plugin leading spaces
+" }}}
+
+" Ledger {{{
+nnoremap <leader>* :call ledger#transaction_state_toggle(line('.'), ' *?!')<CR>
 " }}}
 
 " Calendar {{{

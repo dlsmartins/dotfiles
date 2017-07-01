@@ -44,7 +44,7 @@ $ITCMD -A TCP -p tcp ! --syn -m conntrack --ctstate NEW -j REJECT --reject-with 
 # ALLOW INCOMING TCP ON 80 (HTTP)
 $ITCMD -A TCP -p tcp -m tcp --dport 80 -j ACCEPT
 
-# ALLOW INCOMING TCP ON 443 (HTTPS/SSH)
+# ALLOW INCOMING TCP ON 443 (HTTPS)
 $ITCMD -A TCP -p tcp -m tcp --dport 443 -j ACCEPT
 
 # REJECT EVERYTHING ELSE (TCP)
@@ -59,6 +59,8 @@ $ITCMD -P FORWARD DROP
 $ITCMD -P OUTPUT DROP
 
 # SSLH
+$ITCMD -t mangle -F
+$ITCMD -t mangle -X
 $ITCMD -t mangle -N SSLH
 $ITCMD -t mangle -A OUTPUT -p tcp --out-interface $IFPUB --sport 22 -j SSLH
 $ITCMD -t mangle -A OUTPUT -p tcp --out-interface $IFPUB --sport 4443 -j SSLH
