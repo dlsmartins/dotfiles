@@ -1,0 +1,31 @@
+server {
+    listen       164.132.230.255:4443;
+    #listen       [2001:41d0:401:3000::55f0]:4443;
+    server_name  beancount.daniel.martins.im;
+    #root         /usr/share/nginx/daniel.martins.im;
+
+    ssl on;
+    ssl_certificate /etc/letsencrypt/live/martins.im/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/martins.im/privkey.pem;
+    ssl_trusted_certificate /etc/letsencrypt/live/martins.im/chain.pem;
+
+    add_header Strict-Transport-Security "max-age=31536000; includeSubDomains; preload";
+    add_header X-Frame-Options DENY;
+    add_header X-Content-Type-Options nosniff;
+
+    location / {
+        proxy_pass http://127.0.0.1:8008/;
+        proxy_set_header        Host $host;
+        proxy_set_header	Referer $http_referer;
+        proxy_set_header        X-Real-IP $remote_addr;
+        proxy_set_header        X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header        X-Forwarded-Proto $scheme;
+
+        # Fix the “It appears that your reverse proxy set up is broken" error.
+        #proxy_read_timeout  90;
+
+        proxy_redirect https://localhost https://daniel.martins.im;
+        #proxy_redirect off;
+    }
+    
+}
