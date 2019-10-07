@@ -5,6 +5,6 @@ export HISTSIZE=2000
 export SAVEHIST=$HISTSIZE
 export VIMINIT='let $MYVIMRC="$XDG_CONFIG_HOME/vim/vimrc" | source $MYVIMRC'
 export EDITOR=vim
-export BROWSER=jumanji
-export PANEL_FIFO="/tmp/panel-fifo"
+#export BROWSER=jumanji
+#export PANEL_FIFO="/tmp/panel-fifo"
 export LEDGER_FILE=$HOME/daniel_books/main.ledger
